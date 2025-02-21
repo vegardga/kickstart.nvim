@@ -25,6 +25,7 @@ vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
 vim.opt.showmode = false
 vim.schedule(function()
@@ -34,6 +35,11 @@ vim.opt.breakindent = true
 vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.smartindent = true
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
@@ -61,9 +67,11 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv") -- beware, updates undo-tree for ev
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv") -- beware, updates undo-tree for every move
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
+vim.keymap.set('v', '<leader>p', '"_dP')
 vim.keymap.set('n', '<TAB>', ':bn<CR>')
 vim.keymap.set('n', '<S-TAB>', ':bp<CR>')
 vim.keymap.set('n', '<leader>bd', ':bd<CR>', { desc = '[B]uffer [d]elete' })
+vim.keymap.set('n', '<leader><CR>', ':source ~/.config/nvim/init.lua <CR>', { desc = 'Source vimrc' })
 
 -- [[ Basic Autocommands ]]
 vim.api.nvim_create_autocmd('TextYankPost', {
