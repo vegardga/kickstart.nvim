@@ -67,11 +67,15 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv") -- beware, updates undo-tree for ev
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv") -- beware, updates undo-tree for every move
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
+vim.keymap.set('n', '<leader>y', '"+y')
+vim.keymap.set('n', '<leader>p', '"+p')
 vim.keymap.set('v', '<leader>p', '"_dP')
 vim.keymap.set('n', '<TAB>', ':bn<CR>')
 vim.keymap.set('n', '<S-TAB>', ':bp<CR>')
 vim.keymap.set('n', '<leader>bd', ':bd<CR>', { desc = '[B]uffer [d]elete' })
 vim.keymap.set('n', '<leader><CR>', ':source ~/.config/nvim/init.lua <CR>', { desc = 'Source vimrc' })
+vim.keymap.set('n', 'ø', ':')
+-- vim.keymap.set('Q', '!!$SHELL<CR>')
 
 -- [[ Basic Autocommands ]]
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -118,5 +122,6 @@ require('lazy').setup({
   },
 })
 
+--
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
