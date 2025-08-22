@@ -75,6 +75,10 @@ vim.keymap.set('n', '<S-TAB>', ':bp<CR>')
 vim.keymap.set('n', '<leader>bd', ':bd<CR>', { desc = '[B]uffer [d]elete' })
 vim.keymap.set('n', '<leader><CR>', ':source ~/.config/nvim/init.lua <CR>', { desc = 'Source vimrc' })
 vim.keymap.set('n', 'ø', ':')
+vim.keymap.set('n', 'å', '[')
+vim.keymap.set('n', 'Å', '{')
+vim.keymap.set('n', 'æ', ']')
+vim.keymap.set('n', 'Æ', '}')
 -- vim.keymap.set('Q', '!!$SHELL<CR>')
 
 -- [[ Basic Autocommands ]]
